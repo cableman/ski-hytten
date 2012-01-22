@@ -1,0 +1,13 @@
+name = Yr weatherdata
+description = A module for getting weather forecast from http://yr.no.
+core = 7.x
+files[] = yr_verdata.module
+files[] = yr_verdata.admin.inc
+files[] = yr_verdata.install
+configure = admin/config/services/yr_verdata
+; Information added by drupal.org packaging script on 2011-10-23
+version = "7.x-1.3"
+core = "7.x"
+project = "yr_verdata"
+datestamp = "1319367336"
+

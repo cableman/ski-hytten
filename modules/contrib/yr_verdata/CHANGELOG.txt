@@ -1,0 +1,165 @@
+Yr Weatherdata 7.x-1.x 2011-10-23
+---------------------------------
+Issue #1269096 by tjodolv: Altered the way the long term-forecast displays days to include all periods up to 6 days.
+Issue #1264394 by tjodolv: Added rel="nofollow" to outgoing links to prevent the module from being a "SEO-driven-module". Credit links at the bottom of the page will still refer to yr.no.
+
+Yr Weatherdata 7.x-dev 2011-06-04
+---------------------------------
+Issue #579106 by tjodolv: Urls from yr.no are now rawurldecoded before being saved. Reported by vegardjo, solution presented by Kami Petersen.
+Attempted another go at getting the correct day name to show in the week-forecast for certain timezone conditions.
+Added option for displaying locations in the overview page as boxes instead of in a table.
+Removed some unused code from the admin file.
+
+Yr Weatherdata 7.x-1.2 2011-04-11
+---------------------------------
+Issue #1117378 by tjodolv: Updated module for changes in yr.no's XML feed.
+Added a limit of 10 to the amount of locations that can be updated in one cron run.
+#1032158 by tjodolv: Fixed the dayname for day headers in the week forecast.
+Added a note that says that all times are in local time.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-21
+--------------------------------------
+Fixed an issue where setting a pager would cause the block to only load the first X locations.
+Added a check for variable "yr_verdata_62" to allow upgrading directly from either of the D6 branches.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-20
+--------------------------------------
+Fixed an issue where the new week-forecast made the radarimage disappear.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-19
+--------------------------------------
+#1064934 by tjodolv: No longer depending on Drupal's format_date(). Removed _yr_verdata_unix_time().
+Removed the date/time settings in the config page. Now just using the site "short" format.
+Removed unnecessary $(document).ready() in yr_verdata.js.
+#1032158 by tjodolv: Week forecast now has better textual and visual separation of days.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-11
+--------------------------------------
+Fixed the default multiblock setting to 'off' in the block hooks.
+Removed note about jquery_ui in the readme.
+Fixed validation of added locations, where some locations could be added several times.
+Fixed a screwup with the xml fetching functionality.
+Improved the caching checking for single locations on a page.
+Added cache clearing for a location page when updating the xml.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-10
+--------------------------------------
+Added some css for symbol and wind images.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-09
+--------------------------------------
+Fixed an issue where a variable could be unset if a location could not be added to the database.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-02-08
+--------------------------------------
+Removed unnessecary checking of the url when loaded from the database. URLs are validated as yr.no urls before saving.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-01-23
+--------------------------------------
+Removed some TODO comments.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-01-05
+--------------------------------------
+Added the 'mps' notation for meters per second to avoid a PHP notice.
+
+Yr Weatherdata 7.x-1.x-dev, 2011-01-04
+--------------------------------------
+Added the attempted feed URL to watchdog error messages.
+Update from 6.x-1.x finally works.
+Modified some CSS.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-29
+--------------------------------------
+Fixed the block listing all locations showing up empty when no locations were added.
+Added css to prevent ugly tabs on the location forecast page for some themes.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-20
+--------------------------------------
+Added some code comments for improved documentation.
+Changed some t()-strings.
+Changed mps to m/s and kph to km/h.
+Reduced the number of decimals to 1 on wind speeds.
+Changed function name from yr_verdata_generate_forecastbox() to yr_verdata_generate_forecastboxes().
+Changed function name from _yr_verdata_forecastbox() to yr_verdata_forecastbox().
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-19
+--------------------------------------
+Added some translation functionality to yr_verdata_credit_link().
+Fixed the group table headers for grouping locations by forecast language.
+Removed the "Reset to defaults" button in the configuration.
+Any enabled randomblock and multiblocks is now being disabled when disabling that feature in configuration.
+Added radarimage for locations in Norway.
+Added yr_verdata.js for tabs on the single location forecast page.
+Added ui.tabs library loading for the tabs.
+Added some more types of places in _yr_verdata_translatable().
+Added link to printable PDF provided by yr.no.
+Altered info links to the whole item being a link.
+Changed some t()-strings.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-13
+--------------------------------------
+CSS is now being correctly added for blocks through render arrays.
+Added a block for showing the forecast for a random location.
+Fixed the default maxage setting to be 6 hours all around the code.
+#824098: Made location type translatable. This may get taken out again. Needs testing.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-12
+--------------------------------------
+Sorting and grouping of locations added.
+Some more options added to the configuration page, for sorting and name resolution with fallback.
+"DRY"ed up some parts of the code.
+Changed some strings.
+Added some theming info to README.txt.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-11
+--------------------------------------
+Added the configuration form.
+Included the option to set the path to a directory for using custom symbols.
+Saving the configuration form clears the cache.
+Fixed some minor issues reported by Coder.
+Added README.txt
+The update path should work now. Testing needed.
+Screwed up the logic in yr_verdata_resolve_name(). Fixed now.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-08
+--------------------------------------
+When a forecast block is enabled, it will as default not show on pages in the 'forecast*' path.
+Location names in blocks link to the forecast page for that location.
+Changed name of yr_credit_link() to yr_verdata_credit_link().
+Added credit links to blocks.
+Removed the 'view yr_verdata' permission. Now relying on the core 'access content' permission.
+Added update hook to the install file for upgrading 6.x-1.x -> 7.x-1.x.
+Changed the length of the 'lang' field in the database from 3 to 8. 5 may be enough, but you never know.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-07
+--------------------------------------
+Did some more css fixups.
+Added blocks, both multiblock and single all-locations-block.
+Added long-term-forecast to the single location page.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-06
+--------------------------------------
+Added some more css.
+The basic location information now includes a 24h forecast.
+Precipitation and pressure added to the forecast period-tabs.
+Added logic and theme for polar night and midnight sun.
+Changed the length for 'name' in the database scheme from 25 to 100, just to be on the safe side.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-05
+--------------------------------------
+Added stylesheet.
+Added functions for resolving weather symbols, wind and temperature.
+Forecast in the overview page is now functional.
+Deleting locations now works, and the cache gets flushed when adding new locations.
+Added a function for generating credit links.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-12-04
+--------------------------------------
+Got my head around using render arrays for the output. Caching also enabled.
+Re-added yr_verdata.admin.inc. Some of it needs some more work.
+Changed some function names.
+Caching now works like intended. I hope.
+
+Yr Weatherdata 7.x-1.x-dev, 2010-11-27
+--------------------------------------
+Started a new rewrite of this... Keeping some of the code from the last attempt.
