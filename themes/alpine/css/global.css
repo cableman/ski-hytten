@@ -1,1 +1,20 @@
 /* This file will hold the main styles for your website. */
+
+/* Header zone */
+.logo-img {
+  padding-top: 1em;
+}
+
+/* Content zone */
+.section-content {
+  background: #DDD url('../images/background_content.png') repeat right top;
+  color: #000;
+}
+
+
+/* Footer */
+.section-footer {
+  background: #000 url('../images/background_footer.png') repeat right top;
+  color: #DDD;
+}
+

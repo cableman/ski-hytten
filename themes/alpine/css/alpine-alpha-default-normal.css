@@ -1,1 +1,35 @@
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
+
+.page {
+  background: url("../images/background_wide.png") no-repeat scroll center top rgb(243, 243, 243)
+}
+
+/* Menu */
+.block-main-menu .menu ul {
+  list-style: none;
+  margin: auto;
+}
+
+.block-main-menu .menu li {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.block-main-menu .menu a {
+  color: #444;
+  display: block;
+  padding: 2.5em;
+  text-decoration: none;
+}
+
+.block-main-menu a.active {
+  background: #000 url('../images/background_footer.png') repeat right top;
+  color: #FFF;
+}
+
+.block-main-menu a:hover {
+  background: #000 url('../images/background_footer.png') repeat right top;
+  color: #FFF;
+}
