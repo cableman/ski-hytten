@@ -18,7 +18,7 @@
 }
 
 .block-main-menu .menu a {
-  color: #444;
+  color: #616161;
   display: block;
   padding: 2.5em;
   text-decoration: none;
@@ -26,10 +26,10 @@
 
 .block-main-menu a.active {
   background: #000 url('../images/background_footer.png') repeat right top;
-  color: #FFF;
+  color: #BDBDBD;
 }
 
 .block-main-menu a:hover {
   background: #000 url('../images/background_footer.png') repeat right top;
-  color: #FFF;
+  color: #BDBDBD;
 }
