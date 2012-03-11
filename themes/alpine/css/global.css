@@ -15,7 +15,11 @@
 /* Footer */
 .section-footer {
   background: #000 url('../images/background_footer.png') repeat right top;
-  color: #FFF;
+  color: #BDBDBD;
+}
+
+.zone-footer .region .block-inner {
+  padding: 1.4em;
 }
 
 /* Links */
