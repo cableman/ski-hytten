@@ -15,6 +15,17 @@
 /* Footer */
 .section-footer {
   background: #000 url('../images/background_footer.png') repeat right top;
-  color: #DDD;
+  color: #FFF;
 }
 
+/* Links */
+a:link,
+a:visited,
+a:hover {
+  color: #0090FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
