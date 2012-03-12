@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Frontpage feature.
+ */
+
+include_once('ski_hytten_frontpage.features.inc');
