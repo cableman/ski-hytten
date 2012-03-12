@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_views_api().
+ * Implements hook_views_api().
  */
 function ski_hytten_photo_gallery_views_api() {
   list($module, $api) = func_get_args();
@@ -15,7 +15,7 @@ function ski_hytten_photo_gallery_views_api() {
 }
 
 /**
- * Implementation of hook_image_default_styles().
+ * Implements hook_image_default_styles().
  */
 function ski_hytten_photo_gallery_image_default_styles() {
   $styles = array();
@@ -25,9 +25,10 @@ function ski_hytten_photo_gallery_image_default_styles() {
     'name' => 'foto',
     'effects' => array(
       2 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'label' => 'Skalér',
+        'help' => 'Skalering bevarer billedets højde-bredde-forhold. Hvis kun den ene dimension angives vil den anden blive beregnet.',
         'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
         'form callback' => 'image_scale_form',
         'summary theme' => 'image_scale_summary',
         'module' => 'image',
@@ -47,9 +48,10 @@ function ski_hytten_photo_gallery_image_default_styles() {
     'name' => 'foto_thumbnail',
     'effects' => array(
       3 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
         'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
         'summary theme' => 'image_resize_summary',
         'module' => 'image',
@@ -67,7 +69,7 @@ function ski_hytten_photo_gallery_image_default_styles() {
 }
 
 /**
- * Implementation of hook_node_info().
+ * Implements hook_node_info().
  */
 function ski_hytten_photo_gallery_node_info() {
   $items = array(

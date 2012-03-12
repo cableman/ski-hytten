@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_filter_default_formats().
+ * Implements hook_filter_default_formats().
  */
 function ski_hytten_static_page_filter_default_formats() {
   $formats = array();

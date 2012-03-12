@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_menu_default_menu_custom().
+ * Implements hook_menu_default_menu_custom().
  */
 function ski_hytten_photo_gallery_menu_default_menu_custom() {
   $menus = array();
