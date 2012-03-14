@@ -10,3 +10,9 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
+
+function alpine_preprocess_page(&$vars) {
+  drupal_add_js(drupal_get_path('theme', 'alpine') . '/js/jquery.flexslider');
+  drupal_add_js(drupal_get_path('theme', 'alpine') . '/js/slider.js');
+  drupal_add_css(drupal_get_path('theme', 'alpine') . '/css/flexslider.css');
+}

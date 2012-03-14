@@ -5,6 +5,11 @@
   padding-top: 1em;
 }
 
+/* Slider*/
+.zone-preface-wrapper ul {
+  margin-bottom: 0px;
+}
+
 /* Content zone */
 .section-content {
   background: #FFF url('../images/background.png') repeat right top;
