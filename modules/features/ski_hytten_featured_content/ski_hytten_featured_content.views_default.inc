@@ -36,50 +36,11 @@ function ski_hytten_featured_content_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementer pr. side';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
-  $handler->display->display_options['style_plugin'] = 'slideshow';
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['animation'] = 'slide';
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['animationduration'] = '1000';
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['slideshow'] = 1;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['slideshowspeed'] = '7000';
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['directionnav'] = 1;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['controlnav'] = 0;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['keyboardnav'] = 1;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['mousewheel'] = 0;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['pauseplay'] = 0;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['randomize'] = 0;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['animationloop'] = 1;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['pauseonaction'] = 1;
-  $handler->display->display_options['style_options']['flexslider_views_slideshow']['pauseonhover'] = 1;
-  $handler->display->display_options['style_options']['slideshow_type'] = 'flexslider_views_slideshow';
-  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
-  $handler->display->display_options['style_options']['skin_info'] = array(
-    'class' => 'default',
-    'name' => 'Default',
-    'module' => 'views_slideshow',
-    'path' => '',
-    'stylesheets' => array(),
-  );
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'field_featured_image' => 0,
-    'title' => 0,
-    'field_featured_content' => 0,
-  );
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'field_featured_image' => 0,
-    'title' => 0,
-    'field_featured_content' => 0,
-  );
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
-  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 0;
   /* Felt: Indhold: Billede */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
@@ -98,8 +59,9 @@ function ski_hytten_featured_content_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_featured_image']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_featured_image']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_featured_image']['element_type'] = '0';
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_featured_image']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_featured_image']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_featured_image']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_featured_image']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_featured_image']['hide_alter_empty'] = 1;
@@ -114,22 +76,33 @@ function ski_hytten_featured_content_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 0;
   /* Felt: Indhold: Beskrivelse */
   $handler->display->display_options['fields']['field_featured_content']['id'] = 'field_featured_content';
   $handler->display->display_options['fields']['field_featured_content']['table'] = 'field_data_field_featured_content';
   $handler->display->display_options['fields']['field_featured_content']['field'] = 'field_featured_content';
   $handler->display->display_options['fields']['field_featured_content']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_content']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_featured_content']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['alter']['absolute'] = 0;
@@ -143,12 +116,37 @@ function ski_hytten_featured_content_views_default_views() {
   $handler->display->display_options['fields']['field_featured_content']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_featured_content']['element_type'] = '0';
   $handler->display->display_options['fields']['field_featured_content']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_featured_content']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_featured_content']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_featured_content']['field_api_classes'] = 0;
+  /* Felt: Global: Tilpasset tekst */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="flex-caption"><h2>[title]</h2><p>[field_featured_content]</p></span>';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -180,6 +178,7 @@ function ski_hytten_featured_content_views_default_views() {
     t('Elementer pr. side'),
     t('- Alle -'),
     t('Forskydning'),
+    t('<span class="flex-caption"><h2>[title]</h2><p>[field_featured_content]</p></span>'),
     t('Front page slider'),
   );
   $export['featured_content_slider'] = $view;
