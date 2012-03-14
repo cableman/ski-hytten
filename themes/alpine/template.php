@@ -12,7 +12,7 @@
  */
 
 function alpine_preprocess_page(&$vars) {
-  drupal_add_js(drupal_get_path('theme', 'alpine') . '/js/jquery.flexslider');
+  drupal_add_js(drupal_get_path('theme', 'alpine') . '/js/jquery.flexslider-min.js');
   drupal_add_js(drupal_get_path('theme', 'alpine') . '/js/slider.js');
   drupal_add_css(drupal_get_path('theme', 'alpine') . '/css/flexslider.css');
 }
