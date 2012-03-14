@@ -1,8 +1,8 @@
 (function ($) {
   $(window).load(function() {
     $('.flexslider').flexslider({
-      animation: "slide",
-			controlsContainer: ".flexslider-container"
+      animation: "fade",
+      controlNav: false
     });
 	});
 })(jQuery);
