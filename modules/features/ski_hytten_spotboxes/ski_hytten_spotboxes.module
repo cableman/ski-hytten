@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Spotboxes feature.
+ */
+
+include_once('ski_hytten_spotboxes.features.inc');

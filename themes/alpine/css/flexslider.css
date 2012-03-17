@@ -49,6 +49,13 @@
   zoom: 1;
 }
 
+.flex-caption a:link,
+.flex-caption a:visited,
+.flex-caption a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .flex-caption {
   width: 98%;
   padding: 1%;
@@ -60,6 +67,17 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,.3);
   font-size: 14px;
   line-height: 18px;
+}
+
+.flex-caption h2 {
+  padding-left: 14px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.flex-caption p {
+  padding-left: 14px;
+  margin-bottom: 1em;
 }
 
 /* Direction Nav */
