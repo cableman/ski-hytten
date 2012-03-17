@@ -124,12 +124,39 @@ function ski_hytten_featured_content_views_default_views() {
   $handler->display->display_options['fields']['field_featured_content']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_featured_content']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_featured_content']['field_api_classes'] = 0;
+  /* Felt: Indhold: Link */
+  $handler->display->display_options['fields']['field_featured_link']['id'] = 'field_featured_link';
+  $handler->display->display_options['fields']['field_featured_link']['table'] = 'field_data_field_featured_link';
+  $handler->display->display_options['fields']['field_featured_link']['field'] = 'field_featured_link';
+  $handler->display->display_options['fields']['field_featured_link']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_featured_link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_featured_link']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_featured_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_featured_link']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_featured_link']['field_api_classes'] = 0;
   /* Felt: Global: Tilpasset tekst */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="flex-caption"><h2>[title]</h2><p>[field_featured_content]</p></span>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="flex-caption"><a href="[field_featured_link]"><h2>[title]</h2><p>[field_featured_content]</p></a></span>';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
@@ -179,7 +206,7 @@ function ski_hytten_featured_content_views_default_views() {
     t('Elementer pr. side'),
     t('- Alle -'),
     t('Forskydning'),
-    t('<span class="flex-caption"><h2>[title]</h2><p>[field_featured_content]</p></span>'),
+    t('<span class="flex-caption"><a href="[field_featured_link]"><h2>[title]</h2><p>[field_featured_content]</p></a></span>'),
     t('Front page slider'),
   );
   $export['featured_content_slider'] = $view;
