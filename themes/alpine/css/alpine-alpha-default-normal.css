@@ -32,3 +32,9 @@
 .block-main-menu a:hover {
   text-decoration: underline;
 }
+
+/* Only for the front page content */
+.front .region-content .content {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
