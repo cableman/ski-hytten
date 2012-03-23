@@ -80,29 +80,35 @@ function ski_hytten_photo_gallery_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_album',
       'foreign keys' => array(
-        'tid' => array(
+        'nid' => array(
           'columns' => array(
-            'tid' => 'tid',
+            'nid' => 'nid',
           ),
-          'table' => 'taxonomy_term_data',
+          'table' => 'node',
         ),
       ),
       'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
+        'nid' => array(
+          0 => 'nid',
         ),
       ),
-      'module' => 'taxonomy',
+      'module' => 'node_reference',
       'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'photos',
-            'parent' => '0',
-          ),
+        'referenceable_types' => array(
+          'albums' => 'albums',
+          'featured_content' => 0,
+          'foto' => 0,
+          'page' => 0,
+          'spotbox' => 0,
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
         ),
       ),
       'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
+      'type' => 'node_reference',
     ),
     'field_instance' => array(
       'bundle' => 'foto',
@@ -112,9 +118,9 @@ function ski_hytten_photo_gallery_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
+          'module' => 'node_reference',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'node_reference_default',
           'weight' => 1,
         ),
         'teaser' => array(
@@ -132,14 +138,15 @@ function ski_hytten_photo_gallery_field_default_fields() {
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'taxonomy',
+        'active' => 1,
+        'module' => 'node_reference',
         'settings' => array(
-          'autocomplete_path' => 'taxonomy/autocomplete',
-          'size' => 60,
+          'autocomplete_match' => 'contains',
+          'autocomplete_path' => 'node_reference/autocomplete',
+          'size' => '60',
         ),
-        'type' => 'taxonomy_autocomplete',
-        'weight' => '3',
+        'type' => 'node_reference_autocomplete',
+        'weight' => '2',
       ),
     ),
   );
@@ -179,11 +186,11 @@ function ski_hytten_photo_gallery_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'foto',
+            'image_style' => 'medium',
           ),
           'type' => 'image',
           'weight' => '0',
