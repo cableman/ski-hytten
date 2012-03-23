@@ -23,11 +23,16 @@ function ski_hytten_spotboxes_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['css_class'] = 'spotbox clearfix';
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -35,7 +40,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 0;
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -61,7 +66,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 0;
-  /* Field: Content: Image */
+  /* Felt: Indhold: Image */
   $handler->display->display_options['fields']['field_sportbox_image']['id'] = 'field_sportbox_image';
   $handler->display->display_options['fields']['field_sportbox_image']['table'] = 'field_data_field_sportbox_image';
   $handler->display->display_options['fields']['field_sportbox_image']['field'] = 'field_sportbox_image';
@@ -90,7 +95,7 @@ function ski_hytten_spotboxes_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_sportbox_image']['field_api_classes'] = 0;
-  /* Field: Content: Content */
+  /* Felt: Indhold: Content */
   $handler->display->display_options['fields']['field_spotbox_conetent']['id'] = 'field_spotbox_conetent';
   $handler->display->display_options['fields']['field_spotbox_conetent']['table'] = 'field_data_field_spotbox_conetent';
   $handler->display->display_options['fields']['field_spotbox_conetent']['field'] = 'field_spotbox_conetent';
@@ -115,7 +120,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['field_spotbox_conetent']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_spotbox_conetent']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_spotbox_conetent']['field_api_classes'] = 0;
-  /* Field: Content: Link */
+  /* Felt: Indhold: Link */
   $handler->display->display_options['fields']['field_spotbox_link']['id'] = 'field_spotbox_link';
   $handler->display->display_options['fields']['field_spotbox_link']['table'] = 'field_data_field_spotbox_link';
   $handler->display->display_options['fields']['field_spotbox_link']['field'] = 'field_spotbox_link';
@@ -142,7 +147,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['field_spotbox_link']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_spotbox_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_spotbox_link']['field_api_classes'] = 0;
-  /* Contextual filter: Content: Nid */
+  /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -154,7 +159,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['nid']['not'] = 0;
-  /* Filter criterion: Content: Type */
+  /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -166,13 +171,13 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler = $view->new_display('block', 'Spotbox', 'block_spotbox');
   $translatables['spotbox'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('All'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Alle'),
     t('Spotbox'),
   );
   $export['spotbox'] = $view;

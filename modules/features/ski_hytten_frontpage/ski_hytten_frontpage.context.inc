@@ -32,6 +32,12 @@ function ski_hytten_frontpage_context_default_contexts() {
           'region' => 'preface_first',
           'weight' => 0,
         ),
+        'nodespotbox-22' => array(
+          'module' => 'nodespotbox',
+          'delta' => '22',
+          'region' => 'preface_second',
+          'weight' => 0,
+        ),
       ),
     ),
   );
