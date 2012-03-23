@@ -1,7 +1,7 @@
 name = "Photo gallery"
 description = "Photo gallery (content type, views and image styles)"
 core = "7.x"
-package = "Features"
+package = "Ski-hytten"
 php = "5.2.4"
 version = "7.x-1.0"
 project = "ski_hytten_photo_gallery"

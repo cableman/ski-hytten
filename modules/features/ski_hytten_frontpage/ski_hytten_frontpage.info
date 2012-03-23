@@ -1,7 +1,7 @@
 name = "Frontpage"
 description = "Front page contenxt etc."
 core = "7.x"
-package = "Features"
+package = "Ski-hytten"
 php = "5.2.4"
 version = "7.x-1.0-beta1"
 project = "ski_hytten_frontpage"

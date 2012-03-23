@@ -1,7 +1,7 @@
 name = "Spotboxes"
 description = "Provides spotboxes for the site"
 core = "7.x"
-package = "Features"
+package = "Ski-hytten"
 php = "5.2.4"
 version = "7.x-1.0-beta1"
 project = "ski_hytten_spotboxes"
