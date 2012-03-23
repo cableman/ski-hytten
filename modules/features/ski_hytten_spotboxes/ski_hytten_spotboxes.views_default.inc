@@ -22,6 +22,7 @@ function ski_hytten_spotboxes_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'spotbox clearfix';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -32,6 +33,8 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -50,6 +53,8 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'block-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
@@ -103,6 +108,7 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['field_spotbox_conetent']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_spotbox_conetent']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_spotbox_conetent']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_spotbox_conetent']['element_class'] = 'text-content';
   $handler->display->display_options['fields']['field_spotbox_conetent']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_spotbox_conetent']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_spotbox_conetent']['hide_empty'] = 0;
@@ -127,6 +133,8 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['fields']['field_spotbox_link']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_spotbox_link']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_spotbox_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_spotbox_link']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_spotbox_link']['element_class'] = 'link';
   $handler->display->display_options['fields']['field_spotbox_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_spotbox_link']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_spotbox_link']['hide_empty'] = 0;
@@ -146,13 +154,6 @@ function ski_hytten_spotboxes_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['nid']['not'] = 0;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
