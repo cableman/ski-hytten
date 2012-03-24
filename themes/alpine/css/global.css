@@ -1,9 +1,10 @@
-html * {
-  font-family: 'ColaborateThinRegular', sans-serif;
+html body {
+  font-family: 'OpenSansCondensedLight', sans-serif;
   letter-spacing: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.02em;
   font-weight: normal;
 }
 

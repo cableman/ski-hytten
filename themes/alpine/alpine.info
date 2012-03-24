@@ -38,7 +38,7 @@ css[global.css][description] = 'This file holds all the globally active custom C
 css[global.css][options][weight] = '10'
 
 ; ----- / FONTS CSS / -----
-stylesheets[all][] = css/Colaborate/stylesheet.css
+stylesheets[all][] = css/open-sans/stylesheet.css
 
 settings[toggle_logo] = '1'
 settings[toggle_name] = '0'
