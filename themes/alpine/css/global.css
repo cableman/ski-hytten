@@ -1,6 +1,10 @@
-body {
-  font-family: 'CartoGothicStdBook', 'arial', sans-serif;
-  font-size: 12px;
+html * {
+  font-family: 'ColaborateThinRegular', sans-serif;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 /* Header zone */
@@ -54,10 +58,10 @@ a:hover {
   position: absolute;
   background: #000 url('../images/background_footer.png') repeat right top;
   color: #FFF;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.5em 1.5em 0.5em 1em;
   left: -0.4em;
   top: 32%;
-  font-size: 150%;
+  font-size: 130%;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
