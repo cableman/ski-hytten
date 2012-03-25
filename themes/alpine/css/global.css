@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Content zone */
+.zone-content {
+  padding-top: 0.4em;
+}
+
 .section-content {
   background: #FFF url('../images/background.png') repeat right top;
   color: #000;

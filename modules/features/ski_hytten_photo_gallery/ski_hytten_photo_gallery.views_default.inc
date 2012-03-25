@@ -42,11 +42,10 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -71,7 +70,7 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['nid']['link_to_node'] = 0;
-  /* Felt: Indhold: Album image */
+  /* Field: Content: Album image */
   $handler->display->display_options['fields']['field_album_image']['id'] = 'field_album_image';
   $handler->display->display_options['fields']['field_album_image']['table'] = 'field_data_field_album_image';
   $handler->display->display_options['fields']['field_album_image']['field'] = 'field_album_image';
@@ -90,6 +89,7 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_album_image']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_album_image']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_album_image']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_album_image']['element_type'] = '0';
   $handler->display->display_options['fields']['field_album_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_album_image']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_album_image']['hide_empty'] = 0;
@@ -97,11 +97,11 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_album_image']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_album_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_album_image']['settings'] = array(
-    'image_style' => 'foto_thumbnail',
+    'image_style' => 'foto_thumbnail_large',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_album_image']['field_api_classes'] = 0;
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -119,25 +119,27 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = 'span';
+  $handler->display->display_options['fields']['title']['element_class'] = 'block-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -163,14 +165,14 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Indhold: Album (field_album) */
+  /* Relationship: Content: Album (field_album) */
   $handler->display->display_options['relationships']['field_album_nid']['id'] = 'field_album_nid';
   $handler->display->display_options['relationships']['field_album_nid']['table'] = 'field_data_field_album';
   $handler->display->display_options['relationships']['field_album_nid']['field'] = 'field_album_nid';
   $handler->display->display_options['relationships']['field_album_nid']['required'] = 1;
   $handler->display->display_options['relationships']['field_album_nid']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -195,7 +197,7 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 0;
-  /* Felt: Indhold: Foto */
+  /* Field: Content: Foto */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -229,7 +231,7 @@ function ski_hytten_photo_gallery_views_default_views() {
   );
   $handler->display->display_options['fields']['field_image']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -243,14 +245,14 @@ function ski_hytten_photo_gallery_views_default_views() {
   $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['nid']['not'] = 0;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -273,7 +275,7 @@ function ski_hytten_photo_gallery_views_default_views() {
     t('Master'),
     t('Fotos'),
     t('mere'),
-    t('Udfør'),
+    t('Apply'),
     t('Gendan'),
     t('Sortér efter'),
     t('Stigende'),
@@ -284,9 +286,10 @@ function ski_hytten_photo_gallery_views_default_views() {
     t('node/[nid]'),
     t('List albums'),
     t('Shows all photos using colorbox'),
+    t('more'),
     t('List fotos'),
     t('field_album'),
-    t('Alle'),
+    t('All'),
     t('Photo panes'),
   );
   $export['fotos'] = $view;
