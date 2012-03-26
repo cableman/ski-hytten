@@ -5,31 +5,32 @@
 }
 
 /* Menu */
-.block-main-menu .menu ul {
+.menu-name-main-menu .menu ul {
   list-style: none;
   margin: auto;
 }
 
-.block-main-menu .menu li {
+.menu-name-main-menu .menu li {
   display: inline;
   float: left;
   margin: 0;
   padding: 0;
 }
 
-.block-main-menu .menu a {
+.menu-name-main-menu .menu a {
   color: #626262;
   display: block;
   padding: 2.5em;
   text-decoration: none;
 }
 
-.block-main-menu a.active {
+.menu-name-main-menu a.active,
+.menu-name-main-menu a.active-trail {
   background: #000 url('../images/background_footer.png') repeat right top;
   color: #FFF;
 }
 
-.block-main-menu a:hover {
+.menu-name-main-menu a:hover {
   text-decoration: underline;
 }
 
