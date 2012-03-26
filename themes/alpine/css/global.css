@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Content zone */
 .zone-content {
-  padding-top: 0.4em;
+  padding: 0.4em 0 1em 0;
 }
 
 .section-content {
@@ -79,4 +79,33 @@ a:hover {
   float: right;
   font-size: 115%;
   margin-right: 1em;
+}
+
+/* Lists (photos) */
+.list ul {
+  list-style: none;
+}
+
+.list li {
+  display: inline;
+  float: left;
+  margin: 0.5em;
+  padding: 0.6em;
+  background-color: #FFF;
+  border: 1px solid #BDBDBD;
+  text-align: center;
+    -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.list img {
+  border: 1px solid #BDBDBD;
+}
+
+.list .block-title {
+  margin-bottom: 0;
+}
+
+.list .block-title a:hover {
+  text-decoration: none;
 }
