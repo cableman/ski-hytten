@@ -9,6 +9,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
 /* Header zone */
 .logo-img {
   padding-top: 1em;
