@@ -1,5 +1,6 @@
 html * {
   font-family: 'PTSansCaptionRegular', sans-serif;
+  font-size: 12px;
   letter-spacing: 0;
 }
 
@@ -108,4 +109,9 @@ a:hover {
 
 .list .block-title a:hover {
   text-decoration: none;
+}
+
+/* Lists */
+ul {
+  list-style: disc inside none;
 }
