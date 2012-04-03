@@ -97,7 +97,7 @@
   display: block;
   background: url(../images/slider/bg_direction_nav.png) no-repeat;
   position: absolute;
-  top: 45%;
+  top: 40%;
   cursor: pointer;
   text-indent: -999em;
 }
