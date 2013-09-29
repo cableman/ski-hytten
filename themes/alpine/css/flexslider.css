@@ -70,6 +70,7 @@
 }
 
 .flex-caption h2 {
+  font-size: 160%;
   padding-left: 14px;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
@@ -96,7 +97,7 @@
   display: block;
   background: url(../images/slider/bg_direction_nav.png) no-repeat;
   position: absolute;
-  top: 50%;
+  top: 40%;
   cursor: pointer;
   text-indent: -999em;
 }

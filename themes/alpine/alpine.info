@@ -37,6 +37,9 @@ css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
 
+; ----- / FONTS CSS / -----
+stylesheets[all][] = css/PT-Sans/stylesheet.css
+
 settings[toggle_logo] = '1'
 settings[toggle_name] = '0'
 settings[toggle_slogan] = '0'

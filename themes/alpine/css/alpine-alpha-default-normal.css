@@ -5,32 +5,43 @@
 }
 
 /* Menu */
-.block-main-menu .menu ul {
+.menu-name-main-menu.menu-level-1 .menu ul {
   list-style: none;
   margin: auto;
 }
 
-.block-main-menu .menu li {
+.menu-name-main-menu.menu-level-1 .menu li {
   display: inline;
   float: left;
   margin: 0;
   padding: 0;
 }
 
-.block-main-menu .menu a {
+.menu-name-main-menu.menu-level-1 .menu a {
   color: #626262;
   display: block;
-  padding: 2.5em;
+  padding: 2.5em 2em;
   text-decoration: none;
 }
 
-.block-main-menu a.active {
+/* Highlight rent the cabin */
+.menu-name-main-menu.menu-level-1 .menu li.menu-mlid-757 a {
+  font-weight: bold;
+}
+
+.menu-name-main-menu.menu-level-1 a.active,
+.menu-name-main-menu.menu-level-1 a.active-trail {
   background: #000 url('../images/background_footer.png') repeat right top;
   color: #FFF;
 }
 
-.block-main-menu a:hover {
+.menu-name-main-menu.menu-level-1 a:hover {
   text-decoration: underline;
+}
+
+/* Side menu */
+.menu-level-2 .menu li {
+  list-style: disc inside none;
 }
 
 /* Only for the front page content */
