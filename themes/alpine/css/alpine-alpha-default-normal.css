@@ -25,7 +25,8 @@
 }
 
 /* Highlight rent the cabin */
-.menu-name-main-menu.menu-level-1 .menu li.menu-mlid-757 a {
+.menu-name-main-menu.menu-level-1 .menu li.menu-mlid-757 a,
+.menu-name-main-menu.menu-level-1 .menu li.menu-mlid-782 a {
   font-weight: bold;
 }
 
